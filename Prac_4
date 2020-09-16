@@ -1,0 +1,20 @@
+Step 1 :- How To Install SSH Server
+   -> Command :- sudo apt-get install openssh-server
+Step 2 :- Now you need to Enable ssh service
+   -> Command :- sudo sysytemctl start ssh
+Step 3 :-And Then Test It By Login Into SystemUsing  the given command  
+   -> Command :- ssh kali@kali
+Step 4 :- First Update And Then Install OpenSSH server.
+    -> Command :- sudo apt update
+Step 5 :- Now you need to Install OpenSSH Server
+    -> Command :- sudo apt install openssh-server
+Step 6 :- Now you need to Verify And Run SSh Service
+    -> Command :- sudo systemctl status ssh
+Step 7 :- Now you to need Configure Firewall And Open Port 22.
+     -> Command :- sudo ufw allow ssh
+     -> Command :- sudo ufw enable
+     -> Command :- sudo ufw status
+Step 8 :- To Establish Completed With Own Computer
+     -> Command :- ssh 127.0.0.1
+Step 9 :- To Check Which User Is Logged In Right Now
+     -> Command :- who
