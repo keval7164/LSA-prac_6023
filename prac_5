@@ -1,0 +1,52 @@
+step 1 :-  first you need to install the the samba server 
+  -> command :- sudo apt-get -y install samba
+step 2 :- now you need to stat the samba server 
+  -> command :- sudo systemctl start smbd
+step 3 :- now you need to check the status of the server whether it is unable or not
+  -> command :- sudo systemctl status smbd
+step 4 :- now you need to start the nmbd 
+  -> command :- sudo systemctl start nmbd
+step 5 :- now you ned to chec kthe status of nmbd 
+  -> command :- sudo systemctl status nmbd
+step 6 :- now you needd t o make a samba server diectory in home 
+   -> command :- mkdir samba _server/home/kali
+step 7 :- now you need to make few text files in the directory which we have created 
+  -> command :- cd /home/kali/samba_shared 
+                       :- toucgh ad.txt,ab.txt,ac.txt 
+step 8 :- now change the directory
+  -> command :- cd/etc/samba
+                        :- ls/etc/samba
+step 9 :- make the backup of smb.conf 					
+	cp smb.conf smb.conf_bkp take thew backup of smb.conf
+step 10 :- few configuration in /etc/smb.conf
+   sudo nano smb.conf
+step 11:- now delet everything i9nside smb.conf and then write 
+		 [samba_shared]
+	comment = Welcome to samba
+	path = /home/shibu/samba_shared
+	browseable = yes
+	read only = yes
+	guest ok = no
+step 12 :-  now install smb client
+  -> command :- sudo apt-get -y install smbclient
+step 13 :- now you need to stat the smbclient
+  -> command :- sudo systemctl start smbd
+step 14 :- now you need to stat the smbclient
+  ->command :- sudo systemctl status smbd
+step 15 :- whoami
+step 16 :- sudo pdbedit -a -u $(whoami)
+step 17 :- sudo pdbedit -L (to check all users)
+step 18 :- now make any connectionn possible
+    sudo ufw allow from (your ip addr) any app Samba
+step 19 :- ip a (OR) ip addr both command wil work 
+step 20 :- now relod the firewall
+  -> command :- sudo ufw reload  
+step21 :-  To check
+    sudo smbcllient -U <username> -L  //your ip
+step22 :- restart services
+  -> command :- sudo systemctl restart smbd
+                       :- sudo systemctl restart nmbd
+step23 :- In windows press windows + R key and now a pop up box will open and their write ip addr 
+step24 :-  write your credentials 
+step 25 :- now samba_shared and documents folder are visible.
+step26 :- Connection and sharing has successfully done
