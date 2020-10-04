@@ -23,7 +23,7 @@ step 10 :- few configuration in /etc/smb.conf
 step 11:- now delet everything i9nside smb.conf and then write 
 		 [samba_shared]
 	comment = Welcome to samba
-	path = /home/shibu/samba_shared
+	path = /home/kali/samba_shared
 	browseable = yes
 	read only = yes
 	guest ok = no
