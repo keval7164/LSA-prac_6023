@@ -3,7 +3,7 @@ Step 1 :- Installing DHCP Server
 	Command  :- sudo apt-get -y install isc-dhcp-server
 -> Now you need to edit the file /etc/default/isc-dhcp-server to define the interfaces DHCPD should use to serve DHCP requests, with the INTERFACES option
 the file will be in the etc folder so go in the folder and change the option 
-	Command :- Change Interface Option (INTERFACES="eth0")
+	Command :- sudo nano/etc/default/isc-dhcp-server
 
 Step 2 :- Configure DHCP Server
 -> After This We Have To Configure DHCP Server
