@@ -15,7 +15,7 @@ Step4:-
   ->Command : -home/kali/dir_name 127.0.0.1(rw)  [rw-gives read write permission to the file]
 Step5:-
   ->Use the below code it will create a table and keep the records.
-  ->command :- sudo export -ra (Creates a table and keeps the record in files)
+  ->command :- sudo exportfs -ra (Creates a table and keeps the record in files)
 Step6:-
   ->If you don't have nfs-common then install it
   ->first update the packges if needed 
